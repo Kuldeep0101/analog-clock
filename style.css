@@ -1,20 +1,47 @@
-*{
-margin : 0;
-padding: 0;
-box-sizing: border-box;
-overflow: hidden;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
-body{
+body {
     font-family: 'Arvo', serif;
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: #111111;
 }
 
-.heading{
+.heading {
     position: relative;
     color: white;
+}
+
+.clock {
+    width: 450px;
+    height: 450px;
+    background-image: url(img/clock.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock::before{
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background: white;
+    border-radius: 50%;
+    z-index: 9999;
+}
+
+.clock .hour,
+.clock .min,
+.clock .sec{
+position: absolute;
 }
